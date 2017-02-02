@@ -1,0 +1,31 @@
+.textBox{
+	width:600px;
+}
+.searchBtn{
+
+}
+.searchBarWrapper{
+	text-align: center;
+}
+.resultContainerItemWrapper{
+	margin-top: 20px;
+	cursor: pointer;
+}
+.resultContainerItemThumbnail{
+	max-height: 200px;
+}
+.resultContainerItemDescription{
+
+}
+.imageWrapper{
+
+}
+.detailsThumbnail{
+	max-height: 400px;
+}
+.resultContainerItemDescription p {
+
+}
+.detailedViewWrapper{
+
+}
