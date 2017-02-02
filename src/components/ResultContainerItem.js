@@ -7,19 +7,18 @@ var ResultContainerItem = React.createClass({
 	},
 
 	handleClick: function(){
-		this.props.onItemClick(this.props.data)
+		this.props.onItemClick(this.props.data);
 	},
 
 	render: function() {
 	    return(
-	    	<div className="col-lg-12">
+	    	<div className="col-lg-4">
 			    <div className="resultContainerItemWrapper" onClick={this.handleClick}>
 			        <div className="imageWrapper">
 			            <img src={this.getImage()} className="resultContainerItemThumbnail" />
 			        </div>
 			        <div className="resultContainerItemDescription">
-			            <p>{this.props.name}</p>
-			            <p>{this.props.description}</p>
+			            <h1>{this.props.name}</h1>
 			        </div>
 			    </div>
 			</div>);

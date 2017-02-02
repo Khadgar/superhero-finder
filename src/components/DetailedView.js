@@ -7,7 +7,7 @@ var DetailedView = React.createClass({
 	},
 
 	getDescription:function(){
-		return this.props.content.description?this.props.content.description:''
+		return this.props.content.description?this.props.content.description:'';
 	},
 
 	getDetails:function(data){
@@ -16,6 +16,7 @@ var DetailedView = React.createClass({
 				return <div key={index}>{part.name}</div>;
 			});
   		}
+  		
   		return node;
 	},
 
@@ -46,7 +47,7 @@ var DetailedView = React.createClass({
 				        <div className="comicsContainer col-lg-3"><h3>Events</h3>{this.getDetails(this.props.content.events)}</div>
 			        </div>
 			        <div className="row">
-			        	<div className="comicsContainer col-lg-12"><h3>URLs</h3>{this.getUrls(this.props.content.urls)}</div> 
+			        	<div className="urlsContainer col-lg-12"><h3>URLs</h3>{this.getUrls(this.props.content.urls)}</div> 
 			        </div>
 			    </div>
 			</div>

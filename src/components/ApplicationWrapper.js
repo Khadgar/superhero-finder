@@ -32,7 +32,7 @@ var ApplicationWrapper = React.createClass({
                     data: json.data.results,
                     heroname:name
                 });
-                console.log(this.state)
+                console.log(this.state);
             }.bind(this));
         }.bind(this))
             .catch(function(error) {
@@ -40,7 +40,12 @@ var ApplicationWrapper = React.createClass({
             });
     },
 
+    init: function(){
+        this.loadHeroByName("hulk");
+    },
+
     getInitialState: function() {
+        this.init();
         return {
             data: [],
             heroname:'',
@@ -55,10 +60,10 @@ var ApplicationWrapper = React.createClass({
   	render: function() {
     	return( 
 	    	<div className="applicationWrapper container-fluid">
-				<div className="row">
+				<div className="searchContainer row">
 		      		<SearchBar onSearchSubmit={this.loadHeroByName}/>
 		      	</div>
-			    <div className="row">
+			    <div className="heroContainer row">
 				    <ResultContainer data={this.state.data} heroName={this.state.heroname} onItemClick={this.setDetailedView}/>
 				    <DetailedView content={this.state.selectedhero}/>
 			    </div>

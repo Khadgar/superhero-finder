@@ -1,24 +1,52 @@
+@font-face {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Marvel'), local('Marvel-Regular'), url(http://fonts.gstatic.com/s/marvel/v6/789UQI4gZlFVSw9fHCriRQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+.applicationWrapper{
+
+}
+.heroContainer{
+	
+}
+
 .textBox{
-	width:600px;
+	width:400px;
+	margin-right: 12px;
 }
 .searchBtn{
 
 }
+
 .searchBarWrapper{
 	text-align: center;
+	height:80px;
+	margin-top: 40px;
 }
 .resultContainerItemWrapper{
 	margin-top: 20px;
 	cursor: pointer;
 }
 .resultContainerItemThumbnail{
-	max-height: 200px;
+  max-height:100px;
+  max-width:100px;
+  border-radius: 50px;
 }
 .resultContainerItemDescription{
-
+	text-align: center;
+}
+.resultContainerItemDescription h1 {
+	font-family: Marvel;
+    font-size: 16px;
+    font-style: normal;
+    color:black;
+    font-variant: normal;
+    line-height: 0.4px;
 }
 .imageWrapper{
-
+	text-align: center;
 }
 .detailsThumbnail{
 	max-height: 400px;
