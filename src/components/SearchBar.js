@@ -13,7 +13,7 @@ var SearchBar = React.createClass({
   render: function() {
     return(
 		<div className="searchBarWrapper col-lg-12">
-			<input type="text" className="textBox" placeholder="Enter a Hero name" ref="name" />
+			<input type="text" className="textBox" placeholder="Hero name" ref="name" />
 			<input type="submit" value="Search" className="searchBtn" onClick={this.handleSubmit}/>
 		</div>
 		);

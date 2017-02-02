@@ -30,7 +30,8 @@ var ApplicationWrapper = React.createClass({
             response.json().then(function(json) {
                 this.setState({
                     data: json.data.results,
-                    heroname:name
+                    heroname:name,
+                    selectedhero:{}
                 });
                 console.log(this.state);
             }.bind(this));
@@ -45,7 +46,7 @@ var ApplicationWrapper = React.createClass({
     },
 
     getInitialState: function() {
-        this.init();
+        //this.init();
         return {
             data: [],
             heroname:'',

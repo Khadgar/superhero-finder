@@ -5,6 +5,51 @@
   src: local('Marvel'), local('Marvel-Regular'), url(http://fonts.gstatic.com/s/marvel/v6/789UQI4gZlFVSw9fHCriRQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+
+@media screen and (min-width: 960px) {
+    html {
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
+}
+
+a:link, a:visited {
+    background-color: #f0141e;
+    color: white;
+    padding: 14px 25px;
+    width: 114px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-family: Marvel;
+    font-size: 22px;
+    font-style: normal;
+    color:black;
+    font-variant: normal;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+input[type='text'] { 
+    font-family: Marvel;
+    font-size: 36px;
+    font-style: normal;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+
+input[type=submit] {
+    font-family: Marvel;
+    font-size: 36px;
+    font-style: normal;
+    border-radius: 12px;
+    padding-left: 10px;
+    background-color: #f0141e;
+    color: #000000;
+}
+
 .applicationWrapper{
 
 }
@@ -28,9 +73,22 @@
 .resultContainerItemWrapper{
 	margin-top: 20px;
 	cursor: pointer;
+  -webkit-transition: border-color 1s ease;
+  -moz-transition: border-color 1s ease;
+  -o-transition: border-color 1s ease;
+  -ms-transition: border-color 1s ease;
+  transition: border-color 1s ease;
+  border: 2px solid white;
+  border-radius: 12px;  
+}
+.resultContainerItemWrapper:hover{
+  margin-top: 20px;
+  cursor: pointer;
+  border-color: #f0141e;
+  border-radius: 12px;
 }
 .resultContainerItemThumbnail{
-  max-height:100px;
+  max-height: 78px;
   max-width:100px;
   border-radius: 50px;
 }
@@ -38,18 +96,42 @@
 	text-align: center;
 }
 .resultContainerItemDescription h1 {
-	font-family: Marvel;
+	  font-family: Marvel;
     font-size: 16px;
     font-style: normal;
     color:black;
     font-variant: normal;
-    line-height: 0.4px;
+}
+.detailsWrapper p{
+    font-family: Marvel;
+    font-size: 26px;
+    font-style: normal;
+    color: black;
+    font-variant: normal;
+}
+.detailsWrapper h3{
+    font-family: Marvel;
+    font-size: 36px;
+    font-style: normal;
+    color: black;
+    font-variant: normal;
 }
 .imageWrapper{
 	text-align: center;
 }
 .detailsThumbnail{
-	max-height: 400px;
+	max-height: 320px;
+  border-radius: 20%;
+}
+.otherInfo{
+    font-family: Marvel;
+    font-size: 15px;
+    font-style: normal;
+    color:black;
+    font-variant: normal;
+}
+.urlInfo{
+    margin-bottom: 8px;
 }
 .resultContainerItemDescription p {
 

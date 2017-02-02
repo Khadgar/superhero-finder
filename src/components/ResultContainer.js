@@ -9,7 +9,7 @@ var ResultContainer = React.createClass({
 			return <ResultContainerItem key={index} name={hero.name} data={hero} thumbnail={hero.thumbnail} description={hero.description} onItemClick = {this.props.onItemClick}> </ResultContainerItem>;
 		}.bind(this));
 
-		return <div className="heroList col-lg-6">{nodes}</div>
+		return <div className="heroList col-lg-7 col-md-7 col-sx-7">{nodes}</div>
   }
 });
 
