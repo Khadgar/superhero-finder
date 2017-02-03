@@ -1,15 +1,16 @@
 # superhero-finder
 superhero finder app with Marvel API
 
-Made with ReactJS
+# Made with ReactJS
 Built with Babel + Webpack
-ToDo: design, test
+ToDo: test with enzyme
 
+# Tested with
 npm --version
 4.1.2
 
 node --version
-4.4.3
+v6.9.5
 
 1. npm install
 

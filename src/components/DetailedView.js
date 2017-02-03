@@ -36,7 +36,7 @@ var DetailedView = React.createClass({
 	  	if(Object.keys(this.props.content).length !== 0){
 
 	    	return( 
-	    		<div className="col-lg-5 col-md-6">
+	    		<div className="col-lg-5 col-md-6 col-xs-12">
 				    <div className="detailsWrapper">
 				        <div className="imageWrapper">
 				            <img src={this.getImage()}  className="detailsThumbnail" />
@@ -58,7 +58,7 @@ var DetailedView = React.createClass({
 				);
 		}else{
 			return( 
-	    		<div className="col-lg-5 col-md-6">
+	    		<div className="col-lg-5 col-md-6 col-xs-12">
 				    <div className="emptyDetailsView">
 				        
 				    </div>
