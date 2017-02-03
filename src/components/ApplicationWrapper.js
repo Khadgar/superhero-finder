@@ -4,6 +4,7 @@ import {render} from 'react-dom';
 import DetailedView from './DetailedView.js';
 import ResultContainer from './ResultContainer.js';
 import SearchBar from './SearchBar.js';
+import ErrorMessage from './ErrorMessage.js';
 
 function makeApiCall(urlPart) {
     urlPart = urlPart || "";
@@ -18,6 +19,7 @@ function getCharacters(urlPart) {
     return makeApiCall("characters" + urlPart);
 }
 
+
 var ApplicationWrapper = React.createClass({
 
     loadHeroByName: function(name) {
@@ -31,14 +33,17 @@ var ApplicationWrapper = React.createClass({
                 this.setState({
                     data: json.data.results,
                     heroname:name,
-                    selectedhero:{}
+                    selectedhero:{},
+                    error: false,
+                    message: json.data.results.length + ' heroes found'
                 });
                 console.log(this.state);
             }.bind(this));
         }.bind(this))
             .catch(function(error) {
                 console.log(error);
-            });
+                this.setState({error:true, message:"Error occurred: " + error.message});
+            }.bind(this));
     },
 
     init: function(){
@@ -50,7 +55,9 @@ var ApplicationWrapper = React.createClass({
         return {
             data: [],
             heroname:'',
-            selectedhero:{}
+            selectedhero:{},
+            error:false,
+            message:''
         };
     },
 
@@ -61,6 +68,9 @@ var ApplicationWrapper = React.createClass({
   	render: function() {
     	return( 
 	    	<div className="applicationWrapper container-fluid">
+                <div className="row">
+                    <ErrorMessage message={this.state.message} show={this.state.error} />
+                </div>
 				<div className="searchContainer row">
 		      		<SearchBar onSearchSubmit={this.loadHeroByName}/>
 		      	</div>

@@ -64,6 +64,25 @@ input[type=submit] {
 .searchBtn{
 
 }
+.errorMsg{
+  text-align: center;
+  height:26px;
+  font-family: Marvel;
+  font-size: 26px;
+  font-style: normal;
+  color: #f0141e;
+  font-variant: normal;
+}
+
+.noError{
+  text-align: center;
+  height:26px;
+  font-family: Marvel;
+  font-size: 26px;
+  font-style: normal;
+  color: #f0141e;
+  font-variant: normal;
+}
 
 .searchBarWrapper{
 	text-align: center;

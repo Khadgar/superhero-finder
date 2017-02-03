@@ -12,7 +12,7 @@ var ResultContainerItem = React.createClass({
 
 	render: function() {
 	    return(
-	    	<div className="col-lg-4 col-md-4 col-sx-4">
+	    	<div className="col-lg-4 col-md-6 col-xs-6">
 			    <div className="resultContainerItemWrapper" onClick={this.handleClick}>
 			        <div className="imageWrapper">
 			            <img src={this.getImage()} className="resultContainerItemThumbnail" />
